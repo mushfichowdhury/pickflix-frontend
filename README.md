@@ -2,15 +2,11 @@
 
 > Movie app built with React front end and Ruby on Rails backend that will help users to find movies to watch and categorize currently available movies on Netflix.
 
-### 🏠 [Homepage
-
-
-
 ## Author
 
 👤 **Mushfi Chowdhury**
 
--   Github: [@gabrielhicks](https://github.com/mushfichowdhury)
+-   Github: [@mushfichowdhury](https://github.com/mushfichowdhury)
 -   Backend: https://github.com/mushfichowdhury/pickflix_backend
 
 ## 🛠 Installation & Set Up
