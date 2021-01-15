@@ -1,0 +1,142 @@
+.card {
+    position: relative;
+    width: 500px;
+    padding: 20px;
+    max-width: 70vw;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    /* box-shadow: 0px 18px 55px 0px rgba(0, 0, 0, 0.014); */
+}
+
+/* .card > h1 {
+    position: absolute;
+    top: 10px;
+    color: whitesmoke;
+    text-shadow: 1px 2px black;
+    animation-name: shake;
+    animation-duration: 90s;
+}
+
+.card > h4 {
+    position: relative;
+    top: 40px;
+    color: whitesmoke;
+    text-shadow: 1px 2px black
+} */
+
+.card > h1 {
+    position: absolute;
+    bottom: 70px;
+    color: whitesmoke;
+    text-shadow: 1px 2px black;
+}
+
+.card > h4 {
+    position: absolute;
+    bottom: 40px;
+    color: whitesmoke;
+    text-shadow: 1px 2px black
+}
+
+.card > h5 {
+    position: absolute;
+    bottom: 20px;
+    color: whitesmoke;
+    text-shadow: 1px 2px black;
+    white-space: wrap;
+    text-overflow: clip;
+    background-color: hsla(0, 0%, 0%, 0.212);
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.swipe {
+    position: absolute;
+}
+
+.center {
+    text-align: center;
+;}
+
+.infoText {
+    width: 100%;
+    padding-top: 10px;
+    justify-content: center;
+    display: flex;
+    color: white;
+    animation-name: popup;
+    animation-duration: .8s;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 5vh 5vw 0 5vw;
+    align-items: center;
+}
+
+/* @keyframes shake-animation-right {
+    0% { transform:translate(0,0) }
+    20% { transform:translate(20px,0) }
+    40% { transform:translate(0,0) }
+    60% { transform:translate(20px,0) }
+    80% { transform:translate(0,0) }
+    100% { transform:translate(20px,0) }
+ }
+
+.jake {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min-content;
+    max-height: min-content;
+    animation: shake-animation-right 01s ease infinite;
+}
+
+@keyframes shake-animation-left {
+    0% { transform:translate(0,0) }
+    20% { transform:translate(100px,0) }
+    40% { transform:translate(200px,0) }
+    60% { transform:translate(100px,0) }
+    80% { transform:translate(0,0) }
+    90% { transform:translate(100px,0) }
+    100% { transform:translate(0,0) }
+}
+@keyframes shake-animation-test {
+    0% { transform:translate(0,0) }
+    20% { transform:translate(100px,0) }
+    40% { transform:translate(200px,0) }
+    60% { transform:translate(100px,0) }
+    80% { transform:translate(0,0) }
+    90% { transform:translate(100px,0) }
+    100% { transform:translate(0,0) }
+}
+
+.sean {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min-content;
+    max-height: min-content;
+    animation: shake-animation-left 2s ease infinite;
+}
+
+.hasibul {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    animation: shake-animation-test 4s ease infinite;
+}
+*/
+

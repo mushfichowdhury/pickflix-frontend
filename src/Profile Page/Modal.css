@@ -1,0 +1,89 @@
+html, body, .grid-container { height: 100%; margin: 0; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1.7fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "ModalPoster ModalTitle"
+    "ModalPoster ModalPlot";
+}
+
+.ModalPoster { grid-area: ModalPoster; }
+
+.ModalTitle { 
+    grid-area: ModalTitle;
+    color: white; 
+    background-color:  rgba(0, 0, 0, 0.781);
+}
+
+.ModalTitle > h2 { 
+    grid-area: ModalTitle;
+    color: white; 
+    background-color:  rgba(0, 0, 0, 0.781);
+}
+
+.ModalPlot { 
+    grid-area: ModalPlot;
+    color: white; 
+    background-color:  rgba(0, 0, 0, 0.781);
+}฀
+
+.ModalActors {
+   grid-area: ModalActors;
+    color: white; 
+    background-color:  rgba(0, 0, 0, 0.781); 
+}
+
+.Modal {
+    margin-top: 10%;
+    position: center;
+    top: 80vh;
+    left: 80vw;
+    right: 80vw;
+    bottom: 80vh;
+    background-color: rgba(0, 0, 0, 0.781);
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.781);
+}
+
+.modalcard {
+    width: 350px;
+    max-width: 60vw;
+    height: 500px;
+    padding-left: 30px;
+    justify-content: left;
+    align-items: flex-start;
+    border-radius: 20px;
+    border-color: white;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 18px 55px 0px rgba(0, 0, 0, 0.493);
+    animation-name: fade; 
+    animation-duration: 1s; 
+}
+
+.modalcarddivider{
+    padding-right: 20px;
+    height:auto;
+    /* display:inline-block; */
+}
+
+@keyframes fade { 
+    from { 
+        top: -100px; 
+        opacity: 0; 
+    } 
+    to { 
+        top: 0px; 
+        opacity: 1; 
+    } 
+} 

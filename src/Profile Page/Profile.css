@@ -1,0 +1,96 @@
+h1 {
+    color: white;
+}
+.profileinfo {
+    color: white;
+}
+
+
+.cardContainer {
+    flex-wrap: wrap;
+}
+
+.pickedcard {
+    display: flex;
+    width: 150px;
+    padding: 20px;
+    max-width: 70vw;
+    height: 200px;
+    border-radius: 20px;
+    border-color: white;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 18px 55px 0px rgba(0, 0, 0, 0.493);
+}
+
+
+.flexthis {
+    flex-wrap: wrap;
+    padding: 15px;
+    margin: 0;
+
+}
+
+.title {
+    text-align: center;
+    color: white;
+}
+
+
+li {
+    list-style-type: none;
+    vertical-align: baseline;
+
+}
+
+.button.center {
+    padding: 10px;
+}
+
+.divider{
+    width:5px;
+    height:auto;
+    /* display:inline-block; */
+}
+
+.likedmoviebutton {
+        justify-content: center;
+        width: 30;
+        height: auto;
+        margin-top: 10px;
+        background: transparent;
+        border-color: transparent;
+        text-align: center;
+        cursor: pointer;
+        color: #eee;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 1s ease;
+    }
+
+.likedmoviebutton:hover {
+    border: none;
+    transition: all 1.5s ease;
+    padding: 1px;
+}
+
+
+
+html, body, .grid-container { height: 100%; margin: 0; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  gap: 15px 15px;
+  grid-template-areas:
+    "ProfileInfo Watched-Movies"
+    "Liked-Movies Liked-Movies";
+}
+
+.Watched-Movies { grid-area: Watched-Movies; }
+
+.ProfileInfo { grid-area: ProfileInfo; }
+
+.Liked-Movies { grid-area: Liked-Movies; }
+

@@ -1,0 +1,9 @@
+#root {
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(rgb(0, 0, 0), #DB202C);
+    /* background: linear-gradient(#6466e6, #aab0f5); */
+    /* background: black; */
+  }
