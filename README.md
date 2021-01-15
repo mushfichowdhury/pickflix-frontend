@@ -4,9 +4,10 @@
 
 ## Author
 
-👤 **Mushfi Chowdhury**
+👤 **Mushfi Chowdhury & Jacob Fromm**
 
 -   Github: [@mushfichowdhury](https://github.com/mushfichowdhury)
+-   Github: [@jacob-fromm](https://github.com/Jacob-Fromm)
 -   Backend: https://github.com/mushfichowdhury/pickflix_backend
 
 ## 🛠 Installation & Set Up
@@ -38,7 +39,7 @@
 
 ## 📝 License
 
-Copyright © 2020 [Mushfi Chowdhury & Jacob Fromm](https://github.com/mushfichowdhury).<br />
+Copyright © 2020 [Mushfi Chowdhury & Jacob Fromm](https://github.com/mushfichowdhury) & [Jacob Fromm](https://github.com/Jacob-Fromm).<br />
 This project is [MIT](https://github.com/mushfichowdhury/pickflix-frontend/blob/main/LICENSE) licensed.
 
 ---
