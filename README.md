@@ -39,7 +39,7 @@
 
 ## 📝 License
 
-Copyright © 2020 [Mushfi Chowdhury & Jacob Fromm](https://github.com/mushfichowdhury) & [Jacob Fromm](https://github.com/Jacob-Fromm).<br />
+Copyright © 2020 [Mushfi Chowdhury](https://github.com/mushfichowdhury) & [Jacob Fromm](https://github.com/Jacob-Fromm).<br />
 This project is [MIT](https://github.com/mushfichowdhury/pickflix-frontend/blob/main/LICENSE) licensed.
 
 ---
