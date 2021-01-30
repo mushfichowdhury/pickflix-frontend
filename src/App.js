@@ -7,7 +7,6 @@ import Profile from './Profile Page/Profile';
 import {Route, Redirect, Switch, withRouter} from 'react-router-dom'
 import LogIn from './Welcome Page/LogIn';
 import Signup from './Welcome Page/Signup';
-import axios from "axios";
 import ls from "local-storage"
 
 
