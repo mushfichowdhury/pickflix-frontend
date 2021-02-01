@@ -1,10 +1,61 @@
-.container {
+.profilephoto {
+    position: fixed;
+    left: 0;
+    padding: 20px;
+}
+
+.profilecard {
+    transition: 1s;
+    position: relative;
+    width: 500px;
+    padding: 20px;
+    max-width: 70vw;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.profilecard > h1 {
+    position: absolute;
+    bottom: 70px;
+    color: whitesmoke;
+    text-shadow: 1px 2px black;
+}
+
+.profilecard > h4 {
+    position: absolute;
+    bottom: 40px;
+    color: whitesmoke;
+    text-shadow: 1px 2px black;
+}
+
+.profileflipped {
+    margin: auto;
+    opacity: 0;
+    transform: scale(1.5);
+    opacity: 0;
+    transition: 1s;
+}
+
+.profilephoto:hover .profilecard {
+    transform: rotateX(180deg);
+    opacity: 0;
+}
+
+.profilephoto:hover .profileflipped {
+    transform: translateY(-60px) scale(1);
+    opacity: 1;
+}
+
+
+/* .container {
     width: 420px;
     height: 690px;
     border: 1px solid black;
     margin: 40px auto 0 auto;
     position: relative;
-}
+} */
 
 /* .pic {
 height: 55%;
@@ -55,7 +106,7 @@ position: absolute;
 z-index: 2;
 left: 44%;
 top: 10px;
-} */ */
+} */
 
 /* .back {
 fill: white;
@@ -65,21 +116,3 @@ width: 30px;
 height: 30px;
 } */
 
-.card {
-    position: relative;
-    width: 500px;
-    padding: 20px;
-    max-width: 70vw;
-    height: 60vh;
-    border-radius: 20px;
-    background-size: cover;
-    background-position: center;
-    /* box-shadow: 0px 18px 55px 0px rgba(0, 0, 0, 0.014); */
-}
-
-.card > h1 {
-    position: absolute;
-    bottom: 70px;
-    color: whitesmoke;
-    text-shadow: 1px 2px black;
-}

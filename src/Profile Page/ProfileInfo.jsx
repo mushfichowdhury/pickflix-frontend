@@ -4,11 +4,17 @@ import "./ProfileInfo.css"
 const ProfileInfo = (props) => {
     console.log(props)
     return (
-        <div 
-        style={{ backgroundImage: `url(${props.currentUser.image})` }}
-        className="card">
-            <h1>{props.currentUser.name}, {props.currentUser.age}</h1>
-            <h4>Netflix Binger</h4>
+        <div className="profilephoto">
+            <div 
+            style={{ backgroundImage: `url(${props.currentUser.image})` }}
+            className="profilecard"
+            >
+                <h1>{props.currentUser.name}</h1>
+                <h4>Netflix Binger</h4>
+            </div>
+            <div className="profileflipped">
+                Favorite Movie: Rampage
+            </div>
         </div>
     )
 

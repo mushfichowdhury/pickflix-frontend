@@ -33,9 +33,9 @@ class Profile extends React.Component {
             <ProfileInfo currentUser={this.props.currentUser} />
         </div>
 
-        <div class="Liked-Movies">
+        {/* <div class="Liked-Movies">
             <FlixYouvePicked currentUser={this.props.currentUser}/>
-        </div>
+        </div> */}
 
     </div>
     )}

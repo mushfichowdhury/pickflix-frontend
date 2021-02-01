@@ -8,6 +8,7 @@ import {Route, Redirect, Switch, withRouter} from 'react-router-dom'
 import LogIn from './Welcome Page/LogIn';
 import Signup from './Welcome Page/Signup';
 import ls from "local-storage"
+import Home from './Home Page/Home';
 
 // THIS IS MUSHFI'S WORKING VERSION
 
@@ -52,7 +53,7 @@ class App extends React.Component {
       console.log("found")
       this.setState({ currentUser: foundUser, isLoggedIn: true })
       ls.set("currentUser", foundUser)
-      this.props.history.push("/pickpage")
+      this.props.history.push("/home")
     }
  }
 
@@ -69,17 +70,17 @@ class App extends React.Component {
         {ls.get("currentUser") === null ? 
           <div className="root" >
             <div >
-              <Route
+              {/* <Route
                 path="/pickpage"
                 render={(props) => (
                   <PickPage {...props} currentUser={ls.get("currentUser")} />
                 )}
-              />
+              /> */}
               <Route path="/welcome" component={Welcome} />
-              <Route path="/profile"
+              {/* <Route path="/profile"
                 render={(props) => (
                   <Profile {...props} currentUser={ls.get("currentUser")} />
-                )} />
+                )} /> */}
               <Route path="/login"
                 render={(routerProps, props) => {
                   return (
@@ -113,6 +114,12 @@ class App extends React.Component {
                   <PickPage {...props} currentUser={ls.get("currentUser")} />
                 )}
               />
+              <Route
+                path="/home"
+                render={(props) => (
+                  <Home {...props} currentUser={ls.get("currentUser")} />
+                )}
+              />
               <Route path="/welcome" component={Welcome} />
               <Route path="/profile"
                 render={(props) => (
@@ -129,12 +136,12 @@ class App extends React.Component {
 
                 }
               />
-              <Route
+              {/* <Route
                 path="/signup"
                 render={(props) => (
                   <Signup {...props} submitHandler={this.signupSubmitHandler} />
                 )}
-              />
+              /> */}
             </div>
           </div>
     }

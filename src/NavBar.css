@@ -1,12 +1,28 @@
-.header {
-    display: flex;
+.navnav {
+    /* position: fixed; */
+    top: 0;
     justify-content: space-between;
-    color: white;
-    padding: 5vh 5vw 0 5vw;
-    align-items: center;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    z-index: 1;
+    height: 30px;
+
 }
 
-.header__icon {
-    padding: 20px;
-    color: white;
+.navlogo {
+    width: 150px;
+    object-fit: contain;
+    position: fixed;
+    left: 20px;
+}
+
+.navlogout {
+    position: fixed;
+    right: 20px;
+}
+
+.navbutton {
+    position: fixed;
+    justify-content: space-between;
 }

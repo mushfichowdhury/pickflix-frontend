@@ -3,7 +3,18 @@
     width: 100vw;
     min-height: 100vh;
     overflow: hidden;
-    background: linear-gradient(rgb(0, 0, 0), #DB202C);
-    /* background: linear-gradient(#6466e6, #aab0f5); */
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 15%, rgba(120,9,16,1) 65%, rgba(219,32,44,1) 100%);    /* background: linear-gradient(#6466e6, #aab0f5); */
     /* background: black; */
   }
+
+  button {
+    width: 100px;
+    margin-left: 150px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background: white;
+    font-weight: bold;
+    font-size: 10pt;
+}

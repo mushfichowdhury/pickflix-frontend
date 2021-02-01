@@ -50,7 +50,6 @@ li {
 .divider{
     width:5px;
     height:auto;
-    /* display:inline-block; */
 }
 
 .likedmoviebutton {
@@ -79,13 +78,14 @@ li {
 html, body, .grid-container { height: 100%; margin: 0; }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 0.5fr;
-  gap: 15px 15px;
-  grid-template-areas:
-    "ProfileInfo Watched-Movies"
-    "Liked-Movies Liked-Movies";
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
+    gap: 15px 15px;
+    grid-template-areas:
+        "ProfileInfo Watched-Movies"
+        "Liked-Movies Liked-Movies";
 }
 
 .Watched-Movies { grid-area: Watched-Movies; }
