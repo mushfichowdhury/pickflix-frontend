@@ -9,7 +9,7 @@ class FlixYouvePicked extends React.Component {
     }
     
     componentDidMount = () => {
-        fetch("http://localhost:3000/liked_movies")
+        fetch("https://pick-flix.herokuapp.com/liked_movies")
         .then(resp => resp.json())
         .then((likedMoviesArray) => {
             console.log("liked movies array", likedMoviesArray)

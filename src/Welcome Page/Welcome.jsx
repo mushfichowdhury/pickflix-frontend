@@ -1,31 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./LogIn.css"
+import "./Welcome.css"
+import RecentlyWatchedMovie from './RecentlyWatchedMovie';
 
 const Welcome = () => {
 
     return (
         <div>
-
-            <div>
-                <div id="vertical-flip" class="welcomecard">
-                    <div class="flip">
-                        <div class="front">
-                            <div class="logo">
-                                <img src="https://fontmeme.com/permalink/210115/72a4a804c01a2fa22cb39362f6132c1d.png" alt="PickFlix" />
-                            </div>
-                        </div>
-                        <div className="back">
-                            <Link to="/login">
-                                <button variant="contained" class="welcomebutton" >Enter</button>
-                            </Link>
-                            {/* <Link to="/signup">
-                                <Button variant="contained" class="welcomebutton" >New User?</Button>
-                            </Link> */}
-                        </div>
-                    </div>
+            <div className="welcomecontainer">
+                <div class="logocontainer">
+                    <img 
+                    className="imglogo" 
+                    src="https://fontmeme.com/permalink/210115/72a4a804c01a2fa22cb39362f6132c1d.png" 
+                    alt="PickFlix" />
+                    <Link to="/login">
+                        <button variant="contained" className="logobutton">Enter</button>
+                    </Link>
                 </div>
             </div>
+            <RecentlyWatchedMovie/>
         </div>
     )
 

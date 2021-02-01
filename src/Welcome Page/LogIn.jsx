@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 
 class LogIn extends React.Component {
     state = {
-        username: "",
-        password: ""
+        username: "user",
+        password: "demo"
     }
     changeHandler = (e) => {
         this.setState({ [e.target.name]: e.target.value })
+        console.log(this.state)
     }
 
     localSubmitHandler = (e) => {
@@ -25,10 +26,10 @@ class LogIn extends React.Component {
                         <div className="box-input">
                             <input type="username" name="username" placeholder="Username" required value={this.state.username} onChange={this.changeHandler} />
                             <input type="password" name="password" placeholder="Password" required value={this.state.password} onChange={this.changeHandler} />
-                            <button className="loginbutton" type="submit">Log In</button>
-                            <Link to="/signup">
-                                <button variant="contained" className="welcomebutton" >New User?</button>
-                            </Link>
+                            <button className="loginbutton" type="submit" onClick={this.localSubmitHandler} >Log In</button>
+                            {/* <Link to="/signup">
+                                <button variant="contained" className="newuserbutton" >New User?</button>
+                            </Link> */}
                         </div>
                     </form>
                 </div>

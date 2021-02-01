@@ -5,7 +5,6 @@ import GenreFilter from './GenreFilter';
 import { withAlert } from 'react-alert'
 import _ from 'underscore'
 // import { Console } from 'console';
-// THIS IS OUR PRE-PRESENTATION VERSION. I <3 U
 class TinderCards extends React.Component {
 
     state= {
@@ -25,7 +24,7 @@ class TinderCards extends React.Component {
     }
 
     componentDidMount = () => {
-        fetch("http://localhost:3000/movies")
+        fetch("https://pick-flix.herokuapp.com/movies")
             .then(resp => resp.json())
             .then((moviesArray) => {
                 this.setState({
@@ -34,7 +33,7 @@ class TinderCards extends React.Component {
                     // need to render the movies that DO NOT match any of the movies in the likedMovies db
                 })
             })
-        fetch("http://localhost:3000/liked_movies")
+        fetch("https://pick-flix.herokuapp.com/liked_movies")
             .then(resp => resp.json())
             .then((data) => {
                 this.setState({
@@ -57,7 +56,7 @@ class TinderCards extends React.Component {
         }
         else {
             console.log("adding movie")
-            fetch("http://localhost:3000/liked_movies", {
+            fetch("https://pick-flix.herokuapp.com/liked_movies", {
                 method: "POST",
                 headers: {
                     'Content-Type': "application/json",

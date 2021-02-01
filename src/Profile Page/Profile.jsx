@@ -11,7 +11,7 @@ class Profile extends React.Component {
     }
 
     componentDidMount = () => {
-        fetch("http://localhost:3000/users")
+        fetch("https://pick-flix.herokuapp.com/users")
         .then(resp => resp.json())
         .then(userdata => {
             this.setState({

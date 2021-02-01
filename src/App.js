@@ -1,5 +1,5 @@
 import './App.css';
-import React, { Component } from 'react';
+import React from 'react';
 import NavBar from './NavBar'
 import PickPage from './Pick Page/PickPage';
 import Welcome from './Welcome Page/Welcome';
@@ -9,6 +9,7 @@ import LogIn from './Welcome Page/LogIn';
 import Signup from './Welcome Page/Signup';
 import ls from "local-storage"
 
+// THIS IS MUSHFI'S WORKING VERSION
 
 class App extends React.Component {
   state = {
@@ -19,17 +20,17 @@ class App extends React.Component {
 
   componentDidMount = () => {
     this.setState({ currentUser: ls.get("currentUser") || "" })
-    fetch("http://localhost:3000/users")
+    fetch("https://pick-flix.herokuapp.com/users")
       .then(resp => resp.json())
       .then(users => {
         this.setState({ allUsers: users })
       })
-  
+      this.props.history.push("/welcome")
   }
   
   signupSubmitHandler = (newUser) => {
     console.log("new user in app.js", newUser)
-    fetch("http://localhost:3000/users", {
+    fetch("https://pick-flix.herokuapp.com/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -46,6 +47,7 @@ class App extends React.Component {
 
   loginSubmitHandler = (userInfo) => {
     let foundUser = this.state.allUsers.find(user => userInfo.username === user.username)
+    console.log(this.state.allUsers)
     if (foundUser) {
       console.log("found")
       this.setState({ currentUser: foundUser, isLoggedIn: true })

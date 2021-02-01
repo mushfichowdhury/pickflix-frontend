@@ -22,7 +22,7 @@ class LikedMovies extends React.Component {
     }
 
     deleteHandler = () => {
-        fetch(`http://localhost:3000/liked_movies/${this.props.movieObj.id}`, {
+        fetch(`https://pick-flix.herokuapp.com/liked_movies/${this.props.movieObj.id}`, {
             method: "DELETE",
         })
         .then(resp => resp.json())
