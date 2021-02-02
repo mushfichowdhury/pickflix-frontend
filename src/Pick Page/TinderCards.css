@@ -1,46 +1,29 @@
-.card {
+.tinderposter > img {
     position: relative;
-    width: 500px;
+    object-fit: contain;
+    width: 100%;
     padding: 20px;
-    max-width: 70vw;
-    height: 60vh;
+    height: 800px;
     border-radius: 20px;
     background-size: cover;
     background-position: center;
-    /* box-shadow: 0px 18px 55px 0px rgba(0, 0, 0, 0.014); */
 }
 
-/* .card > h1 {
-    position: absolute;
-    top: 10px;
-    color: whitesmoke;
-    text-shadow: 1px 2px black;
-    animation-name: shake;
-    animation-duration: 90s;
-}
-
-.card > h4 {
-    position: relative;
-    top: 40px;
-    color: whitesmoke;
-    text-shadow: 1px 2px black
-} */
-
-.card > h1 {
+.tinderposter > h1 {
     position: absolute;
     bottom: 70px;
     color: whitesmoke;
     text-shadow: 1px 2px black;
 }
 
-.card > h4 {
+.tinderposter > h4 {
     position: absolute;
     bottom: 40px;
     color: whitesmoke;
     text-shadow: 1px 2px black
 }
 
-.card > h5 {
+.tinderposter > h5 {
     position: absolute;
     bottom: 20px;
     color: whitesmoke;
@@ -53,7 +36,7 @@
 
 }
 
-.cardContainer {
+.tinderposterContainer {
     display: flex;
     justify-content: center;
     margin-top: 5vh;

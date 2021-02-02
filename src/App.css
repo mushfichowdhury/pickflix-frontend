@@ -18,3 +18,7 @@
     font-weight: bold;
     font-size: 10pt;
 }
+
+.row::-webkit-scrollbar {
+    display: none;
+}

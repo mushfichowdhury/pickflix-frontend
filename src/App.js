@@ -4,7 +4,7 @@ import NavBar from './NavBar'
 import PickPage from './Pick Page/PickPage';
 import Welcome from './Welcome Page/Welcome';
 import Profile from './Profile Page/Profile';
-import {Route, Redirect, Switch, withRouter} from 'react-router-dom'
+import {Route, withRouter} from 'react-router-dom'
 import LogIn from './Welcome Page/LogIn';
 import Signup from './Welcome Page/Signup';
 import ls from "local-storage"
@@ -16,7 +16,8 @@ class App extends React.Component {
   state = {
     currentUser: "",
     allUsers: [],
-    isLoggedIn: false
+    isLoggedIn: false,
+    movies: []
   }
 
   componentDidMount = () => {
@@ -26,7 +27,15 @@ class App extends React.Component {
       .then(users => {
         this.setState({ allUsers: users })
       })
-      this.props.history.push("/welcome")
+    this.props.history.push("/welcome")
+    
+    fetch("https://pick-flix.herokuapp.com/movies")
+            .then(resp => resp.json())
+            .then((moviesArray) => {
+                this.setState({
+                    movies: moviesArray
+                })
+            })
   }
   
   signupSubmitHandler = (newUser) => {
@@ -117,7 +126,7 @@ class App extends React.Component {
               <Route
                 path="/home"
                 render={(props) => (
-                  <Home {...props} currentUser={ls.get("currentUser")} />
+                  <Home {...props} currentUser={ls.get("currentUser")} movies={this.state.movies} />
                 )}
               />
               <Route path="/welcome" component={Welcome} />

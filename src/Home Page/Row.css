@@ -1,0 +1,20 @@
+.row {
+    color: white;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 25px;
+}
+
+.poster {
+    padding: 25px;
+    object-fit: contain;
+    width: 100%;
+    max-height: 300px;
+    margin-right: 10px;
+    transition: transform 500ms;
+}
+
+.poster:hover {
+    transform: scale(1.2);
+}
