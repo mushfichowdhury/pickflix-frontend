@@ -1,5 +1,6 @@
 .navnav {
     /* position: fixed; */
+    display: inline-block;
     top: 0;
     justify-content: space-between;
     display: flex;
@@ -17,12 +18,84 @@
     left: 20px;
 }
 
-.navlogout {
-    position: fixed;
-    right: 20px;
+.navbutton {
+    align-items: center;
+    margin: 0;
+    /* right: 50%; */
 }
 
-.navbutton {
+.menuitem {
+    padding: 10px;
+    align-items: center;
+    margin: auto;
+    padding-right: 50px;
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
     position: fixed;
-    justify-content: space-between;
+    width: 36px;
+    height: 25px;
+    right: 20px;
+    top: 20px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+    background: white;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+    background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+    background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+    background: linear-gradient(180deg, rgba(0,0,0,1) 15%, rgba(120,9,16,1) 65%, rgba(219,32,44,1) 100%);    /* background: linear-gradient(#6466e6, #aab0f5); */
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+    fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+    display: inline-block;
+    align-items: center;
+    margin: auto;
+    left: 50%;
+    right: 50%;
+}
+
+.bm-overlay {
+    background: none !important;
 }

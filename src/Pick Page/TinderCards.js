@@ -7,7 +7,8 @@ class TinderCards extends React.Component {
     state= {
         movies: [],
         likedMovies: [],
-        likedArray: []
+        likedArray: [],
+        deck: []
     }
 
 
@@ -16,7 +17,8 @@ class TinderCards extends React.Component {
             .then(resp => resp.json())
             .then((moviesArray) => {
                 this.setState({
-                    movies: moviesArray
+                    movies: moviesArray,
+                    deck: _.sample(moviesArray, 50)
                 })
             })
 
@@ -59,7 +61,7 @@ class TinderCards extends React.Component {
     }
 
     checkIfMovieMatched = (data) => {
-        if (this.state.likedMovies.filter((obj) => { return obj.user.id !== data.user.id }).map(obj => obj.movie.movie_id).includes(data.movie.movie_id)) {
+        if (this.state.likedMovies.filter((obj) => { return obj.user.id !== data.user.id }).map(obj => obj.movie.id).includes(data.movie.id)) {
             alert("You've got a match!")
         }
         else {
@@ -83,8 +85,7 @@ class TinderCards extends React.Component {
     }
 
     render() {
-        console.table("ALL MOVIES", this.state.movies)
-        
+        console.table("DECK", this.state.deck)
         const base_img_url = "https://image.tmdb.org/t/p/original/"
     return (
         <div className="root">
@@ -94,7 +95,7 @@ class TinderCards extends React.Component {
                 : <h2 className='infoText'>Swipe a card to get started!</h2>}
             </div>
             <div className="tinderposterContainer" >
-            {this.state.movies.map(movie => (
+            {this.state.deck.map(movie => (
                 
                 <TinderCard
                 className="swipe"
@@ -102,11 +103,9 @@ class TinderCards extends React.Component {
                 preventSwipe={['up', 'down']}
                 onSwipe={(dir) => this.swipeHandler(dir, movie)}
                 >
-                    <div
-                        // style={{ backgroundImage: `${base_img_url}${movie["poster"]}`} } 
-                        className="tinderposter">
+                    <div className="tinderposter">
                     <h1>{movie["name"]}</h1>
-                    <img src={`${base_img_url}${movie["poster"]}`} />
+                    <img src={`${base_img_url}${movie["poster"]}`} alt="poster" />
                     {/* <h4>{movie["genre"]}</h4> */}
                     {/* <h5>{movie["overview"]}</h5> */}
                 </div>

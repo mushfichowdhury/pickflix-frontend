@@ -66,10 +66,10 @@ class App extends React.Component {
     }
  }
 
- logoutHandler = () => {
-   this.setState({currentUser: {}})
-   ls.remove("currentUser")
- }
+  logoutHandler = () => {
+    this.setState({currentUser: {}})
+    ls.remove("currentUser")
+  }
 
   render() {
     console.log("Logged in as:", ls.get("currentUser"))

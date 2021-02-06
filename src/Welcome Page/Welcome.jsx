@@ -18,7 +18,6 @@ const Welcome = () => {
                     </Link>
                 </div>
             </div>
-            <RecentlyWatchedMovie/>
         </div>
     )
 

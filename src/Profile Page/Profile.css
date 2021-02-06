@@ -1,96 +1,70 @@
-h1 {
-    color: white;
-}
-.profileinfo {
-    color: white;
+.profile-grid-container {
+  display: grid;
+  grid-template-columns: 20px 1fr 2.5fr 20px;
+  grid-template-rows: 50px 0.25fr 0.25fr 1fr 1fr 1fr 1fr 50px;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . ."
+    ". ProfilePhoto Name ."
+    ". ProfilePhoto Details ."
+    ". ProfilePhoto UserInfo ."
+    ". UserStats FavoriteMovies ."
+    ". UserStats RecentlyWatched ."
+    ". . WantToWatch ."
+    ". . . .";
 }
 
-
-.cardContainer {
-    flex-wrap: wrap;
+.Name { 
+    grid-area: Name; 
 }
 
-.pickedcard {
-    display: flex;
-    width: 150px;
-    padding: 20px;
-    max-width: 70vw;
+.Details { 
+    grid-area: Details; 
+}
+
+.UserInfo { 
+    grid-area: UserInfo; 
+}
+
+.FavoriteMovies { 
+    grid-area: FavoriteMovies; 
+}
+
+.RecentlyWatched { 
+    grid-area: RecentlyWatched; 
+}
+
+.WantToWatch { 
+    grid-area: WantToWatch; 
+}
+
+.ProfilePhoto { 
+    grid-area: ProfilePhoto; 
+}
+
+.UserStats { 
+    grid-area: UserStats; 
+}
+
+.profile {
+    text-align: left;
+    object-fit: contain;
+    position: fixed;
+    left: 20px;
+    padding-top: 50px;
+}
+.photocircle {
+    border-radius: 50%;
     height: 200px;
-    border-radius: 20px;
-    border-color: white;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0px 18px 55px 0px rgba(0, 0, 0, 0.493);
+    width: 200px;
+    position: relative;
+    overflow: hidden;
 }
 
-
-.flexthis {
-    flex-wrap: wrap;
-    padding: 15px;
-    margin: 0;
-
+.profilepic {
+    display: inline;
+    /* margin: 0 0; */
+    /* margin-right: 10%; */
+    height: 135%;
+    width: auto;
 }
-
-.title {
-    text-align: center;
-    color: white;
-}
-
-
-li {
-    list-style-type: none;
-    vertical-align: baseline;
-
-}
-
-.button.center {
-    padding: 10px;
-}
-
-.divider{
-    width:5px;
-    height:auto;
-}
-
-.likedmoviebutton {
-        justify-content: center;
-        width: 30;
-        height: auto;
-        margin-top: 10px;
-        background: transparent;
-        border-color: transparent;
-        text-align: center;
-        cursor: pointer;
-        color: #eee;
-        font-weight: bold;
-        text-transform: uppercase;
-        transition: all 1s ease;
-    }
-
-.likedmoviebutton:hover {
-    border: none;
-    transition: all 1.5s ease;
-    padding: 1px;
-}
-
-
-
-html, body, .grid-container { height: 100%; margin: 0; }
-
-.grid-container {
-    padding-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.5fr;
-    gap: 15px 15px;
-    grid-template-areas:
-        "ProfileInfo Watched-Movies"
-        "Liked-Movies Liked-Movies";
-}
-
-.Watched-Movies { grid-area: Watched-Movies; }
-
-.ProfileInfo { grid-area: ProfileInfo; }
-
-.Liked-Movies { grid-area: Liked-Movies; }
-
